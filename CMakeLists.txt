@@ -7,5 +7,14 @@ include_directories(.)
 
 #add_executable(projeto
  #       Estafeta.hpp)
+#add_executable(projeto
+ #       Ecomenda.hpp)
+
+
+#add_executable(projeto
+#       Cenario1.cpp)
+#add_executable(projeto
+ #       Cenario2.cpp)
+
 add_executable(projeto
-        Ecomenda.hpp)
+        Cenario3.cpp)
