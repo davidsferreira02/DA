@@ -9,26 +9,44 @@
 #include "Carrinha.hpp"
 
 
-void C(std::vector<int> volumeMax,std::vector <int> pesoMax,std::vector <int> custo){
+std::vector<Carrinha> C(std::vector<int> volumeMax,std::vector <int> pesoMax,std::vector <int> custo){
+    std::vector<Carrinha>carrinha;
     for(int i=0;i<pesoMax.size();i++){
-      std::vector<Carrinha>carrinha;
       carrinha[i]=Carrinha(volumeMax[i],pesoMax[i],custo[i]);
     }
+    return carrinha;
 }
-void E(std::vector<int> volume,std::vector <int> peso,std::vector <int> recompensa,std::vector<int>duracao){
+std::vector<Ecomenda> E(std::vector<int> volume,std::vector <int> peso,std::vector <int> recompensa,std::vector<int>duracao){
+    std::vector<Ecomenda>ecomenda;
     for(int i=0;i<peso.size();i++){
-        std::vector<Ecomenda>ecomenda;
         ecomenda[i]=Ecomenda(volume[i],peso[i],recompensa[i],duracao[i]);
+    }
+    return ecomenda;
+}
+ bool funcaopreencher(Carrinha carrinhas,Ecomenda ecomendas) {
+     if (carrinhas.getVolMax() < ecomendas.getVolume()) {
+         return false;
+     }
+     if (carrinhas.getPesoMax() < ecomendas.getPeso()) {
+         return false;
+     }
+     return true;
+ }
+
+void Cenario1(std::vector<Carrinha> carrinhas, std::vector <Ecomenda> ecomendas){
+    for(auto carrinha : carrinhas){
+        for(auto  ecomenda : ecomendas){
+           bool preencher=funcaopreencher(carrinha,ecomenda);
+            if(preencher==true){
+                carrinha.setVolMax(carrinha.getVolMax()-ecomenda.getVolume());
+                carrinha.setPesoMax(carrinha.getPesoMax()-ecomenda.getPeso());
+            }
+        }
     }
 }
 
-void Cenario1(){
-
-}
-
-
 int main() {
-    std::vector<int> volume;
+  /*  std::vector<int> volume;
     std::vector <int> peso;
     std::vector <int> recompensa;
     std::string word;
@@ -51,6 +69,7 @@ int main() {
             }
             i++;
         }
+        */
       return 0;
     }
 
@@ -63,7 +82,3 @@ int main() {
 
 
 
-    */
-
-
-}
