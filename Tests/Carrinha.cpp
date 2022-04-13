@@ -1,10 +1,8 @@
-#include "Carrinha.hpp"
+#include "Carrinha.h"
 
 Carrinha::Carrinha(const int pesoMax, const int volMax, const int custo) :
 pesoMax(pesoMax),volMax(volMax),custo(custo){
-
 }
-
 
 int Carrinha::getPesoMax() {
     return pesoMax;

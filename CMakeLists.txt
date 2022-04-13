@@ -1,20 +1,15 @@
-cmake_minimum_required(VERSION 3.21)
-project(projeto)
+cmake_minimum_required(VERSION 3.20)
+project(DA)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(.)
+include_directories(Tests)
 
-#add_executable(projeto
- #       Estafeta.hpp)
-#add_executable(projeto
- #       Ecomenda.hpp)
-
-
-#add_executable(projeto
-#       Cenario1.cpp)
-#add_executable(projeto
- #       Cenario2.cpp)
-
-add_executable(projeto
-        Cenario3.cpp)
+add_executable(DA
+        Tests/Carrinha.cpp
+        Tests/Ecomenda.cpp
+        Tests/Cenario1.cpp
+        Tests/Cenario2.cpp
+        Tests/Cenario3.cpp
+        Tests/readFiles.cpp
+        main.cpp)

@@ -1,5 +1,5 @@
 class Ecomenda{
-protected:
+private:
     int peso;
     int volume;
     int recompensa;
@@ -16,15 +16,3 @@ public:
     int getDuracao();
 
 };
-
-/*class Expresso:public Ecomenda{
-private:
-    int dataEntrega;
-
-public:
-    Expresso(const int peso,const int volume,const int recompensa,const int dataEntrega);
-    int getDataEntrega();
-    void  setDataEntrega(int dataEntrega);
-
-};
-*/

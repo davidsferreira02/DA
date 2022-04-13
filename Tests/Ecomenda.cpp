@@ -1,14 +1,14 @@
 //
 // Created by david on 06/04/22.
 //
-#include "Ecomenda.hpp"
+#include "Ecomenda.h"
 Ecomenda::Ecomenda(const int peso, const int volume, const int recompensa,int duracao):
 peso(peso),volume(volume),recompensa(recompensa),duracao(duracao){
 
 }
 //Expresso::Expresso(const int peso, const int volume, const int recompensa, const int dataEntrega):
   //  Ecomenda(peso,volume,recompensa),dataEntrega(dataEntrega){
-}
+//}
 int Ecomenda::getPeso() {
     return peso;
 }
