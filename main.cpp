@@ -3,8 +3,11 @@
 //
 
 #include "readFiles.h"
+#include "Cenarios.h"
 
 int main(){
     vector<Ecomenda> encomendas = readFiles::readEncomendas();
     vector<Carrinha> carrinhas = readFiles::readCarrinhas();
+
+    Cenarios::cenario3(encomendas);
 }

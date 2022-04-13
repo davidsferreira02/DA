@@ -1,3 +1,10 @@
+#ifndef DA_ECOMENDA_H
+#define DA_ECOMENDA_H
+
+#include <iostream>
+
+using namespace std;
+
 class Ecomenda{
 private:
     int peso;
@@ -14,5 +21,7 @@ public:
     int getVolume();
     int getRecompensa();
     int getDuracao();
-
+    void printEncomenda();
 };
+
+#endif //DA_ECOMENDA_H

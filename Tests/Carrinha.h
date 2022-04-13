@@ -1,3 +1,6 @@
+#ifndef DA_CARRINHA_H
+#define DA_CARRINHA_H
+
 class Carrinha{
 private:
     int pesoMax;
@@ -13,3 +16,5 @@ public:
     int getCusto();
 };
 
+
+#endif //DA_CARRINHA_H
