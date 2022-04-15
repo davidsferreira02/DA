@@ -26,13 +26,16 @@ bool compareEncomanedaByTime(Ecomenda i, Ecomenda j){
 //Time complexity: O(n log n), where n is the number of encomendas
 
 void Cenarios::cenario3(vector<Ecomenda> encomendas){
+
     sort(encomendas.begin(), encomendas.end(), compareEncomanedaByTime);
 
-    int time = (19 - 7) * 3600; //time in seconds from 9 to 17
+    int TIME = (19 - 7) * 3600; //time in seconds from 9 to 17
+    int numEncomendas = 0, used_time = 0;
 
-    while(time > 0 && encomendas.size() > 0){
-        if( (time - encomendas.rbegin()->getDuracao()) > 0){
-            time -= encomendas.rbegin()->getDuracao();
+    while( ((TIME - used_time) > 0) && (encomendas.size() > 0)){
+        if( ( (TIME - used_time) - encomendas.rbegin()->getDuracao() ) > 0){
+            numEncomendas++;
+            used_time += encomendas.rbegin()->getDuracao();
             encomendas.rbegin()->printEncomenda();
             encomendas.pop_back();
         }
@@ -40,4 +43,7 @@ void Cenarios::cenario3(vector<Ecomenda> encomendas){
             break;
         }
     }
+    cout << endl;
+    cout << "Packages delivered: " << numEncomendas << endl;
+    cout << "Average time per package: " << used_time / numEncomendas << endl;
 }
