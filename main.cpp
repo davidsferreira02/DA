@@ -6,11 +6,19 @@
 #include "Cenarios.h"
 
 int main(){
-    vector<Encomenda> encomendas = ReadFiles::readEncomendas();
-    vector<Carrinha> carrinhas = ReadFiles::readCarrinhas();
+    int fileNumber = 1;
+    vector<Encomenda> encomendas;
+    vector<Carrinha> carrinhas;
 
-    Cenarios::cenario1(carrinhas, encomendas);
-    Cenarios::cenario2(carrinhas, encomendas);
-    Cenarios::cenario3(encomendas);
+    for (int i = 1; i <= fileNumber; i++) {
+        encomendas = ReadFiles::readEncomendas(i);
+        carrinhas = ReadFiles::readCarrinhas(i);
 
+        cout << "TEST NUMBER " << i << ":\n";
+        Cenarios::cenario1(carrinhas, encomendas);
+        Cenarios::cenario2(carrinhas, encomendas);
+        Cenarios::cenario3(encomendas);
+    }
+
+    return 0;
 }

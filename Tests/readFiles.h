@@ -19,14 +19,16 @@ class ReadFiles{
 public:
     /*!
      * Lê todas as encomendas dos ficheiros, para que estas possam ser usadas nos cenários
+     * @param filenum número do ficheiro de teste a ler
      * @return vetor com todas as encomendas lidas
      */
-    static vector<Encomenda> readEncomendas();
+    static vector<Encomenda> readEncomendas(int filenum);
     /*!
      * Lê todas as carrinhas dos ficheiros, para que estas possam ser usadas nos cenários
+     * @param filenum número do ficheiro de teste a ler
      * @return vetor com todas as carrinhas lidas
      */
-    static vector<Carrinha> readCarrinhas();
+    static vector<Carrinha> readCarrinhas(int filenum);
 };
 
 #endif //PROJETO_READFILES_H

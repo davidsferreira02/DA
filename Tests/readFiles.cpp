@@ -6,11 +6,15 @@
 
 using namespace std;
 
-vector<Encomenda> ReadFiles::readEncomendas(){
+vector<Encomenda> ReadFiles::readEncomendas(int filenum){
     vector<Encomenda> encomendas;
     ifstream in;
 
-    in.open("../Tests/Data/Encomendas.txt");
+    string filename = "../Tests/Data/Encomendas";
+    filename.append(to_string(filenum));
+    filename.append(".txt");
+
+    in.open(filename);
 
     if(!in.is_open()){
         cerr << "Unable to open file" << endl;
@@ -34,11 +38,15 @@ vector<Encomenda> ReadFiles::readEncomendas(){
     return encomendas;
 }
 
-vector<Carrinha> ReadFiles::readCarrinhas() {
+vector<Carrinha> ReadFiles::readCarrinhas(int filenum) {
     vector<Carrinha> carrinhas;
     ifstream in;
 
-    in.open("../Tests/Data/Carrinhas.txt");
+    string filename = "../Tests/Data/Carrinhas";
+    filename.append(to_string(filenum));
+    filename.append(".txt");
+
+    in.open(filename);
 
     if(!in.is_open()){
         cerr << "Unable to open file" << endl;
