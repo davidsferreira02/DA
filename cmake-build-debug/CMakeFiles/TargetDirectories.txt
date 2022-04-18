@@ -1,3 +1,0 @@
-C:/Users/User/Documents/FEUP/2ano/2Semestre/DA/Projeto_DA/DA/cmake-build-debug/CMakeFiles/DA.dir
-C:/Users/User/Documents/FEUP/2ano/2Semestre/DA/Projeto_DA/DA/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/User/Documents/FEUP/2ano/2Semestre/DA/Projeto_DA/DA/cmake-build-debug/CMakeFiles/rebuild_cache.dir
