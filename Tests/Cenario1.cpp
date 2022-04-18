@@ -27,10 +27,57 @@ bool funcaopreencher(Carrinha carrinhas, Encomenda encomendas) {
     return true;
 }
 
+void mediaCarrinhas(vector<Carrinha> carrinhas, double &medPesoCar, double &medVolCar){
+    double pesoTotal, volTotal;
+
+    for(int i = 0; i < carrinhas.size(); i++){
+        pesoTotal += carrinhas[i].getPesoMax();
+        volTotal += carrinhas[i].getVolMax();
+    }
+
+    medPesoCar = pesoTotal / carrinhas.size();
+    medVolCar = volTotal / carrinhas.size();
+}
+
+void mediaEncomendas(vector<Encomenda> encomendas, double &medPesoEnc, double &medVolEnc){
+    double pesoTotal, volTotal;
+
+    for(int i = 0; i < encomendas.size(); i++){
+        pesoTotal += encomendas[i].getPeso();
+        volTotal += encomendas[i].getVolume();
+    }
+
+    medPesoEnc = pesoTotal / encomendas.size();
+    medVolEnc = volTotal / encomendas.size();
+}
+
+bool compareCarrinha(Carrinha c1, Carrinha c2) {
+    return (c1.getScore() > c2.getScore());
+}
+
+bool compareEncomenda(Encomenda e1, Encomenda e2) {
+    return (e1.getScore() > e2.getScore());
+}
+
+void setScores(vector<Carrinha> &carrinhas, vector<Encomenda> &encomendas) {
+    double medPesoEnc, medVolEnc, medPesoCar, medVolCar;
+    mediaEncomendas(encomendas,medPesoEnc,medVolEnc);
+    mediaCarrinhas(carrinhas,medPesoCar, medVolCar);
+
+    for (auto &carrinha : carrinhas) carrinha.setScore(medPesoCar, medVolCar);
+    for (auto &encomenda : encomendas) encomenda.setScore(medPesoEnc,medVolEnc);
+}
+
 
 
 void Cenarios::cenario1(vector<Carrinha> carrinhas, vector<Encomenda> encomendas) {
     vector<Carrinha> carrinha;
+
+    setScores(carrinhas,encomendas);
+    std::sort(carrinhas.begin(), carrinhas.end(), compareCarrinha);
+    std::sort(encomendas.begin(), encomendas.end(), compareEncomenda);
+
+    int numEncomendas = 0, TOTAL_ENCOMENDAS = encomendas.size();
 
     int estafetas = 0;
     for (auto carrinha: carrinhas) {
@@ -43,17 +90,21 @@ void Cenarios::cenario1(vector<Carrinha> carrinhas, vector<Encomenda> encomendas
                 carrinha.setPesoMax(carrinha.getPesoMax() - encomenda.getPeso());
                 encomendas.erase(encomendas.begin() + j);
                 i = 1;
+                numEncomendas++;
             }
             j++;
         }
         if (i == 1) {
             estafetas++;
-
         }
 
     }
-    cout << "Numero de estafetas é"<<estafetas<<endl ;
 
+
+    cout << "Number of cars used: "<< estafetas << endl;
+    cout << "Number of packages delivered: " << numEncomendas << endl;
+    cout << "Average of packages per car: " << (float) numEncomendas / estafetas << endl;
+    cout << "Percentage of packages delivered: " << ((float) numEncomendas / TOTAL_ENCOMENDAS) * 100 << "%" << endl;
 }
 
 

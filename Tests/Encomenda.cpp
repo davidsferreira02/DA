@@ -22,6 +22,10 @@ int Encomenda::getDuracao() {
     return duracao;
 }
 
+double Encomenda::getScore() {
+    return score;
+}
+
 void Encomenda::setPeso(int peso) {
     this->peso=peso;
 }
@@ -33,6 +37,10 @@ void Encomenda::setVolume(int volume) {
 }
 void Encomenda::setDuracao(int duracao) {
     this->duracao=duracao;
+}
+
+void Encomenda::setScore(double mediaPeso, double mediaVol) {
+    this->score = (((double) this->peso)/mediaPeso)*(((double) this->volume)/mediaVol);
 }
 
 void Encomenda::printEncomenda() {

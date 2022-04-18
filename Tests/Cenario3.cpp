@@ -45,5 +45,5 @@ void Cenarios::cenario3(vector<Encomenda> encomendas){
     cout << endl;
     cout << "Packages delivered: " << numEncomendas << endl;
     cout << "Average time per package: " << used_time / (float) numEncomendas << endl;
-    cout << "Percentage of packages delivered: " << ((TOTAL_ENCOMENDAS - (float) numEncomendas) / TOTAL_ENCOMENDAS) * 100 << "%" << endl;
+    cout << "Percentage of packages delivered: " << ((float) numEncomendas / TOTAL_ENCOMENDAS) * 100 << "%" << endl;
 }
