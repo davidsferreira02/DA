@@ -9,8 +9,8 @@ int main(){
     vector<Encomenda> encomendas = ReadFiles::readEncomendas();
     vector<Carrinha> carrinhas = ReadFiles::readCarrinhas();
 
-    //Cenarios::cenario1(carrinhas, encomendas);
+    Cenarios::cenario1(carrinhas, encomendas);
     Cenarios::cenario2(carrinhas, encomendas);
-    //Cenarios::cenario3(encomendas);
+    Cenarios::cenario3(encomendas);
 
 }

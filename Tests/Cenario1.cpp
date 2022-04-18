@@ -72,6 +72,8 @@ void setScores1(vector<Carrinha> &carrinhas, vector<Encomenda> &encomendas) {
 
 void Cenarios::cenario1(vector<Carrinha> carrinhas, vector<Encomenda> encomendas) {
 
+    cout << "Testing 1:" << endl;
+
     setScores1(carrinhas,encomendas);
     std::sort(carrinhas.begin(), carrinhas.end(), compareCarrinha1);
     std::sort(encomendas.begin(), encomendas.end(), compareEncomenda1);
@@ -103,7 +105,7 @@ void Cenarios::cenario1(vector<Carrinha> carrinhas, vector<Encomenda> encomendas
     cout << "Number of cars used: "<< estafetas << endl;
     cout << "Number of packages delivered: " << numEncomendas << endl;
     cout << "Average of packages per car: " << (float) numEncomendas / estafetas << endl;
-    cout << "Percentage of packages delivered: " << ((float) numEncomendas / TOTAL_ENCOMENDAS) * 100 << "%" << endl;
+    cout << "Percentage of packages delivered: " << ((float) numEncomendas / TOTAL_ENCOMENDAS) * 100 << "%" << endl << endl;
 }
 
 
