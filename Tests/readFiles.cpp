@@ -6,8 +6,8 @@
 
 using namespace std;
 
-vector<Ecomenda> readFiles::readEncomendas(){
-    vector<Ecomenda> encomendas;
+vector<Encomenda> readFiles::readEncomendas(){
+    vector<Encomenda> encomendas;
     ifstream in;
 
     in.open("../Tests/Data/Encomendas.txt");
@@ -27,7 +27,7 @@ vector<Ecomenda> readFiles::readEncomendas(){
         getline(ss, recompensa, ' ');
         getline(ss, duracao);
 
-        Ecomenda encomenda(stoi(peso), stoi(volume), stoi(recompensa), stoi(duracao));
+        Encomenda encomenda(stoi(peso), stoi(volume), stoi(recompensa), stoi(duracao));
 
         encomendas.push_back(encomenda);
     }

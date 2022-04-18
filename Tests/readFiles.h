@@ -6,7 +6,7 @@
 #define PROJETO_READFILES_H
 
 #include "Carrinha.h"
-#include "Ecomenda.h"
+#include "Encomenda.h"
 #include <fstream>
 #include <vector>
 #include <string>
@@ -17,7 +17,7 @@ using namespace std;
 
 class readFiles{
 public:
-    static vector<Ecomenda> readEncomendas();
+    static vector<Encomenda> readEncomendas();
     static vector<Carrinha> readCarrinhas();
 };
 

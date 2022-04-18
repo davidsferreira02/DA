@@ -19,13 +19,13 @@ num dia.
 using namespace std;
 
 //order them in ascending order
-bool compareEncomanedaByTime(Ecomenda i, Ecomenda j){
+bool compareEncomanedaByTime(Encomenda i, Encomenda j){
     return (i.getDuracao() > j.getDuracao());
 }
 
 //Time complexity: O(n log n), where n is the number of encomendas
 
-void Cenarios::cenario3(vector<Ecomenda> encomendas){
+void Cenarios::cenario3(vector<Encomenda> encomendas){
 
     sort(encomendas.begin(), encomendas.end(), compareEncomanedaByTime);
 
@@ -36,7 +36,6 @@ void Cenarios::cenario3(vector<Ecomenda> encomendas){
         if( ( (TIME - used_time) - encomendas.rbegin()->getDuracao() ) > 0){
             numEncomendas++;
             used_time += encomendas.rbegin()->getDuracao();
-            encomendas.rbegin()->printEncomenda();
             encomendas.pop_back();
         }
         else{

@@ -7,7 +7,7 @@ include_directories(Tests)
 
 add_executable(DA
         Tests/Carrinha.cpp
-        Tests/Ecomenda.cpp
+        Tests/Encomenda.cpp
         Tests/Cenario1.cpp
         Tests/Cenario2.cpp
         Tests/Cenario3.cpp

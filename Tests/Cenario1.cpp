@@ -14,28 +14,46 @@ maior número de pedidos, num dia.
 
 #include "Cenarios.h"
 
+
 using namespace std;
 
- bool funcaopreencher(Carrinha carrinhas,Ecomenda ecomendas) {
-     if (carrinhas.getVolMax() < ecomendas.getVolume()) {
-         return false;
-     }
-     if (carrinhas.getPesoMax() < ecomendas.getPeso()) {
-         return false;
-     }
-     return true;
- }
-
-void Cenarios::cenario1(vector<Carrinha> carrinhas, vector <Ecomenda> ecomendas){
-    for(auto carrinha : carrinhas){
-        for(auto  ecomenda : ecomendas){
-           bool preencher=funcaopreencher(carrinha,ecomenda);
-            if(preencher==true){
-                carrinha.setVolMax(carrinha.getVolMax()-ecomenda.getVolume());
-                carrinha.setPesoMax(carrinha.getPesoMax()-ecomenda.getPeso());
-            }
-        }
+bool funcaopreencher(Carrinha carrinhas, Encomenda encomendas) {
+    if (carrinhas.getVolMax() < encomendas.getVolume()) {
+        return false;
     }
+    if (carrinhas.getPesoMax() < encomendas.getPeso()) {
+        return false;
+    }
+    return true;
+}
+
+
+
+void Cenarios::cenario1(vector<Carrinha> carrinhas, vector<Encomenda> encomendas) {
+    vector<Carrinha> carrinha;
+
+    int estafetas = 0;
+    for (auto carrinha: carrinhas) {
+        int i = 0;
+        int j = 0;
+        for (auto encomenda: encomendas) {
+            bool preencher = funcaopreencher(carrinha, encomenda);
+            if (preencher == true) {
+                carrinha.setVolMax(carrinha.getVolMax() - encomenda.getVolume());
+                carrinha.setPesoMax(carrinha.getPesoMax() - encomenda.getPeso());
+                encomendas.erase(encomendas.begin() + j);
+                i = 1;
+            }
+            j++;
+        }
+        if (i == 1) {
+            estafetas++;
+
+        }
+
+    }
+    cout << "Numero de estafetas é"<<estafetas<<endl ;
+
 }
 
 

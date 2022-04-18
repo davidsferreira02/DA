@@ -1,18 +1,18 @@
-#ifndef DA_ECOMENDA_H
-#define DA_ECOMENDA_H
+#ifndef DA_ENCOMENDA_H
+#define DA_ENCOMENDA_H
 
 #include <iostream>
 
 using namespace std;
 
-class Ecomenda{
+class Encomenda{
 private:
     int peso;
     int volume;
     int recompensa;
     int duracao;
 public:
-    Ecomenda(int peso,int volume,int recompensa,int duracao);
+    Encomenda(int peso,int volume,int recompensa,int duracao);
     void setPeso(int peso);
     void setVolume(int volume);
     void setRecompensa(int recompensa);
@@ -24,4 +24,4 @@ public:
     void printEncomenda();
 };
 
-#endif //DA_ECOMENDA_H
+#endif //DA_ENCOMENDA_H
