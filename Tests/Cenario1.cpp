@@ -17,7 +17,7 @@ maior número de pedidos, num dia.
 
 using namespace std;
 
-bool funcaopreencher(Carrinha carrinhas, Encomenda encomendas) {
+bool podePreencher1(Carrinha carrinhas, Encomenda encomendas) {
     if (carrinhas.getVolMax() < encomendas.getVolume()) {
         return false;
     }
@@ -51,31 +51,30 @@ void mediaEncomendas(vector<Encomenda> encomendas, double &medPesoEnc, double &m
     medVolEnc = volTotal / encomendas.size();
 }
 
-bool compareCarrinha(Carrinha c1, Carrinha c2) {
-    return (c1.getScore() > c2.getScore());
+bool compareCarrinha1(Carrinha c1, Carrinha c2) {
+    return (c1.getScore1() > c2.getScore1());
 }
 
-bool compareEncomenda(Encomenda e1, Encomenda e2) {
-    return (e1.getScore() > e2.getScore());
+bool compareEncomenda1(Encomenda e1, Encomenda e2) {
+    return (e1.getScore1() > e2.getScore1());
 }
 
-void setScores(vector<Carrinha> &carrinhas, vector<Encomenda> &encomendas) {
+void setScores1(vector<Carrinha> &carrinhas, vector<Encomenda> &encomendas) {
     double medPesoEnc, medVolEnc, medPesoCar, medVolCar;
     mediaEncomendas(encomendas,medPesoEnc,medVolEnc);
     mediaCarrinhas(carrinhas,medPesoCar, medVolCar);
 
-    for (auto &carrinha : carrinhas) carrinha.setScore(medPesoCar, medVolCar);
-    for (auto &encomenda : encomendas) encomenda.setScore(medPesoEnc,medVolEnc);
+    for (auto &carrinha : carrinhas) carrinha.setScore1(medPesoCar, medVolCar);
+    for (auto &encomenda : encomendas) encomenda.setScore1(medPesoEnc,medVolEnc);
 }
 
 
 
 void Cenarios::cenario1(vector<Carrinha> carrinhas, vector<Encomenda> encomendas) {
-    vector<Carrinha> carrinha;
 
-    setScores(carrinhas,encomendas);
-    std::sort(carrinhas.begin(), carrinhas.end(), compareCarrinha);
-    std::sort(encomendas.begin(), encomendas.end(), compareEncomenda);
+    setScores1(carrinhas,encomendas);
+    std::sort(carrinhas.begin(), carrinhas.end(), compareCarrinha1);
+    std::sort(encomendas.begin(), encomendas.end(), compareEncomenda1);
 
     int numEncomendas = 0, TOTAL_ENCOMENDAS = encomendas.size();
 
@@ -84,7 +83,7 @@ void Cenarios::cenario1(vector<Carrinha> carrinhas, vector<Encomenda> encomendas
         int i = 0;
         int j = 0;
         for (auto encomenda: encomendas) {
-            bool preencher = funcaopreencher(carrinha, encomenda);
+            bool preencher = podePreencher1(carrinha, encomenda);
             if (preencher == true) {
                 carrinha.setVolMax(carrinha.getVolMax() - encomenda.getVolume());
                 carrinha.setPesoMax(carrinha.getPesoMax() - encomenda.getPeso());

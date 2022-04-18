@@ -16,8 +16,12 @@ int Carrinha::getCusto() {
     return custo;
 }
 
-double Carrinha::getScore() {
-    return score;
+double Carrinha::getScore1() {
+    return score1;
+}
+
+double Carrinha::getScore2() {
+    return score2;
 }
 
 void Carrinha::setPesoMax(int pesoMax) {
@@ -30,8 +34,12 @@ void Carrinha::setCusto(int custo) {
     this->custo=custo;
 }
 
-void Carrinha::setScore(double mediaPeso, double mediaVol) {
-    this->score = (((double) this->pesoMax)/mediaPeso)*(((double) this->volMax)/mediaVol);
+void Carrinha::setScore1(double mediaPeso, double mediaVol) {
+    this->score1 = (((double) this->pesoMax)/mediaPeso)*(((double) this->volMax)/mediaVol);
+}
+
+void Carrinha::setScore2(double mediaCusto) {
+    this->score2 = score1/(((double) this->custo)/mediaCusto);
 }
 
 

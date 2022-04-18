@@ -17,6 +17,7 @@ class Cenarios{
 public:
     static void cenario3(vector<Encomenda> encomendas);
     static void cenario1(vector<Carrinha> carrinhas, vector<Encomenda> ecomendas);
+    static void cenario2(vector<Carrinha> carrinhas, vector<Encomenda> ecomendas);
 };
 
 #endif //DA_CENARIOS_H
