@@ -99,7 +99,7 @@ void Cenarios::cenario1(vector<Carrinha> carrinhas, vector<Encomenda> encomendas
 
     }
 
-
+    cout << endl;
     cout << "Number of cars used: "<< estafetas << endl;
     cout << "Number of packages delivered: " << numEncomendas << endl;
     cout << "Average of packages per car: " << (float) numEncomendas / estafetas << endl;

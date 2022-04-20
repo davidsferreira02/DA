@@ -86,30 +86,42 @@ void Cenarios::cenario2(vector<Carrinha> carrinhas, vector<Encomenda> encomendas
     sort(carrinhas.begin(),carrinhas.end(), compareCarrinha2);
 
     int numEncomendas = 0, TOTAL_ENCOMENDAS = encomendas.size();
-    int recompensasTotal, custoTotal;
+    int recompensasTotal = 0, recompensaCarrinha = 0, custoTotal = 0;
     int estafetas = 0;
     for (auto carrinha: carrinhas) {
         bool flag = 0;
-        int j = 0;
+        int idx = 0;
+        vector<int> encomendasEntregues;
+        recompensaCarrinha = 0;
         for (auto encomenda: encomendas) {
             bool preencher = podePreencher2(carrinha, encomenda);
             if (preencher == true) {
                 carrinha.setVolMax(carrinha.getVolMax() - encomenda.getVolume());
                 carrinha.setPesoMax(carrinha.getPesoMax() - encomenda.getPeso());
-                encomendas.erase(encomendas.begin() + j);
                 flag = 1;
-                numEncomendas++;
-                recompensasTotal += encomenda.getRecompensa();
+                recompensaCarrinha += encomenda.getRecompensa();
+                encomendasEntregues.push_back(idx);
             }
-            j++;
+            idx++;
         }
         if (flag == 1) {
-            estafetas++;
-            custoTotal += carrinha.getCusto();
+            if(recompensaCarrinha > carrinha.getCusto()) {
+                estafetas++;
+                for(int j : encomendasEntregues) {
+                    encomendas.erase(encomendas.begin() + j);
+                }
+                numEncomendas += encomendasEntregues.size();
+                //cout << "Added car num" << estafetas << endl;
+                custoTotal += carrinha.getCusto();
+                recompensasTotal += recompensaCarrinha;
+            }
+            else{
+                //cout << "The car did not have profit" << endl;
+            }
         }
     }
 
-
+    cout << endl;
     cout << "Number of cars used: "<< estafetas << endl;
     cout << "Number of packages delivered: " << numEncomendas << endl;
     cout << "Average of packages per car: " << (float) numEncomendas / estafetas << endl;
