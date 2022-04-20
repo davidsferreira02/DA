@@ -16,6 +16,6 @@ var dir_715bdcca7b5e9eff5898540560fccb10 =
     ] ],
     [ "readFiles.cpp", "read_files_8cpp.html", null ],
     [ "readFiles.h", "read_files_8h.html", [
-      [ "readFiles", "classread_files.html", null ]
+      [ "ReadFiles", "class_read_files.html", null ]
     ] ]
 ];

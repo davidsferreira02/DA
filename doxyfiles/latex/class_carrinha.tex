@@ -38,6 +38,15 @@ double \mbox{\hyperlink{class_carrinha_ad6fdb7ec265ce674842586d1e92cb052}{get\+S
 \doxysubsubsection{\texorpdfstring{Carrinha()}{Carrinha()}}
 {\footnotesize\ttfamily Carrinha\+::\+Carrinha (\begin{DoxyParamCaption}\item[{const int}]{peso\+Max,  }\item[{const int}]{vol\+Max,  }\item[{const int}]{custo }\end{DoxyParamCaption})}
 
+Construtor para uma Carinha 
+\begin{DoxyParams}{Parameters}
+{\em peso\+Max} & peso máximo que pode transportar \\
+\hline
+{\em vol\+Max} & volume máximo que pode transportar \\
+\hline
+{\em custo} & custo de transporte que será pago pela empresa \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -47,60 +56,102 @@ double \mbox{\hyperlink{class_carrinha_ad6fdb7ec265ce674842586d1e92cb052}{get\+S
 \doxysubsubsection{\texorpdfstring{getCusto()}{getCusto()}}
 {\footnotesize\ttfamily int Carrinha\+::get\+Custo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Returns}
+Custo de transporte que será pago pela empresa 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_carrinha_a33f9b7192af99acc17451969eb72097a}\label{class_carrinha_a33f9b7192af99acc17451969eb72097a}} 
 \index{Carrinha@{Carrinha}!getPesoMax@{getPesoMax}}
 \index{getPesoMax@{getPesoMax}!Carrinha@{Carrinha}}
 \doxysubsubsection{\texorpdfstring{getPesoMax()}{getPesoMax()}}
 {\footnotesize\ttfamily int Carrinha\+::get\+Peso\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Returns}
+Peso máximo que a carrinha pode transportar 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_carrinha_ab6c0418a21983d81b8243949825782a5}\label{class_carrinha_ab6c0418a21983d81b8243949825782a5}} 
 \index{Carrinha@{Carrinha}!getScore1@{getScore1}}
 \index{getScore1@{getScore1}!Carrinha@{Carrinha}}
 \doxysubsubsection{\texorpdfstring{getScore1()}{getScore1()}}
 {\footnotesize\ttfamily double Carrinha\+::get\+Score1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Returns}
+Score da carrinha tendo em conta o seu peso e volume máximos 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_carrinha_ad6fdb7ec265ce674842586d1e92cb052}\label{class_carrinha_ad6fdb7ec265ce674842586d1e92cb052}} 
 \index{Carrinha@{Carrinha}!getScore2@{getScore2}}
 \index{getScore2@{getScore2}!Carrinha@{Carrinha}}
 \doxysubsubsection{\texorpdfstring{getScore2()}{getScore2()}}
 {\footnotesize\ttfamily double Carrinha\+::get\+Score2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Returns}
+Score da carrinha tendo em conta o seu peso e volume máximos, e o seu custo 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_carrinha_a2ea336b16953aeb5886ef5ac24fbb370}\label{class_carrinha_a2ea336b16953aeb5886ef5ac24fbb370}} 
 \index{Carrinha@{Carrinha}!getVolMax@{getVolMax}}
 \index{getVolMax@{getVolMax}!Carrinha@{Carrinha}}
 \doxysubsubsection{\texorpdfstring{getVolMax()}{getVolMax()}}
 {\footnotesize\ttfamily int Carrinha\+::get\+Vol\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Returns}
+Volume máximo que a carrinha pode transportar 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_carrinha_a06984064843dd2e8d9bc557d24626e18}\label{class_carrinha_a06984064843dd2e8d9bc557d24626e18}} 
 \index{Carrinha@{Carrinha}!setCusto@{setCusto}}
 \index{setCusto@{setCusto}!Carrinha@{Carrinha}}
 \doxysubsubsection{\texorpdfstring{setCusto()}{setCusto()}}
 {\footnotesize\ttfamily void Carrinha\+::set\+Custo (\begin{DoxyParamCaption}\item[{int}]{custo }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}{Parameters}
+{\em custo} & custo da carrinha a ser definido \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_carrinha_a785aeaa370dc530ee8b60d42177cb37a}\label{class_carrinha_a785aeaa370dc530ee8b60d42177cb37a}} 
 \index{Carrinha@{Carrinha}!setPesoMax@{setPesoMax}}
 \index{setPesoMax@{setPesoMax}!Carrinha@{Carrinha}}
 \doxysubsubsection{\texorpdfstring{setPesoMax()}{setPesoMax()}}
 {\footnotesize\ttfamily void Carrinha\+::set\+Peso\+Max (\begin{DoxyParamCaption}\item[{int}]{Peso\+Max }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}{Parameters}
+{\em Peso\+Max} & peso máximo da carrinha a ser definido \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_carrinha_a524118e0e5c7aa69356072bb4fd6e8cd}\label{class_carrinha_a524118e0e5c7aa69356072bb4fd6e8cd}} 
 \index{Carrinha@{Carrinha}!setScore1@{setScore1}}
 \index{setScore1@{setScore1}!Carrinha@{Carrinha}}
 \doxysubsubsection{\texorpdfstring{setScore1()}{setScore1()}}
 {\footnotesize\ttfamily void Carrinha\+::set\+Score1 (\begin{DoxyParamCaption}\item[{double}]{media\+Peso,  }\item[{double}]{media\+Vol }\end{DoxyParamCaption})}
 
+Calcula um determinado score para a carrinha que é tanto maior quanto mais acima da média for o seu peso e volume máximos 
+\begin{DoxyParams}{Parameters}
+{\em media\+Peso} & média do peso máximo de todas as carrinhas \\
+\hline
+{\em media\+Vol} & média do volume máximo de todas as carrinhas \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_carrinha_a6325be2e4839dd1b84b6ae1584a20fd7}\label{class_carrinha_a6325be2e4839dd1b84b6ae1584a20fd7}} 
 \index{Carrinha@{Carrinha}!setScore2@{setScore2}}
 \index{setScore2@{setScore2}!Carrinha@{Carrinha}}
 \doxysubsubsection{\texorpdfstring{setScore2()}{setScore2()}}
 {\footnotesize\ttfamily void Carrinha\+::set\+Score2 (\begin{DoxyParamCaption}\item[{double}]{media\+Custo }\end{DoxyParamCaption})}
 
+Calcula um determinado score para a carrinha que é tanto maior quanto mais acima da média for o seu peso e volume máximos, e mais abaixo da média for o seu custo 
+\begin{DoxyParams}{Parameters}
+{\em media\+Custo} & média do custo de todas as carrinhas \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_carrinha_af468f312a61cf5e227f06d6692a0e855}\label{class_carrinha_af468f312a61cf5e227f06d6692a0e855}} 
 \index{Carrinha@{Carrinha}!setVolMax@{setVolMax}}
 \index{setVolMax@{setVolMax}!Carrinha@{Carrinha}}
 \doxysubsubsection{\texorpdfstring{setVolMax()}{setVolMax()}}
 {\footnotesize\ttfamily void Carrinha\+::set\+Vol\+Max (\begin{DoxyParamCaption}\item[{int}]{Vol\+Max }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}{Parameters}
+{\em Vol\+Max} & volume máximo da carrinha a ser definido \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

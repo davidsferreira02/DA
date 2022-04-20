@@ -44,6 +44,17 @@ void \mbox{\hyperlink{class_encomenda_a8830480cd95345260dfbe4e7c273b771}{print\+
 \doxysubsubsection{\texorpdfstring{Encomenda()}{Encomenda()}}
 {\footnotesize\ttfamily Encomenda\+::\+Encomenda (\begin{DoxyParamCaption}\item[{int}]{peso,  }\item[{int}]{volume,  }\item[{int}]{recompensa,  }\item[{int}]{duracao }\end{DoxyParamCaption})}
 
+Construtor para uma \mbox{\hyperlink{class_encomenda}{Encomenda}} 
+\begin{DoxyParams}{Parameters}
+{\em peso} & peso do pacote a transportar \\
+\hline
+{\em volume} & volume do pacote a transportar \\
+\hline
+{\em recompensa} & valor que a empresa receberá como recompensa pela realização do serviço \\
+\hline
+{\em duracao} & tempo estimado de entrega \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -53,78 +64,128 @@ void \mbox{\hyperlink{class_encomenda_a8830480cd95345260dfbe4e7c273b771}{print\+
 \doxysubsubsection{\texorpdfstring{getDuracao()}{getDuracao()}}
 {\footnotesize\ttfamily int Encomenda\+::get\+Duracao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Returns}
+Tempo estimado de entrega 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_encomenda_a63057714546d6497cb12718e9c95b533}\label{class_encomenda_a63057714546d6497cb12718e9c95b533}} 
 \index{Encomenda@{Encomenda}!getPeso@{getPeso}}
 \index{getPeso@{getPeso}!Encomenda@{Encomenda}}
 \doxysubsubsection{\texorpdfstring{getPeso()}{getPeso()}}
 {\footnotesize\ttfamily int Encomenda\+::get\+Peso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Returns}
+Peso do pacote a transportar 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_encomenda_adf33a4e27d78209d64124a1330791918}\label{class_encomenda_adf33a4e27d78209d64124a1330791918}} 
 \index{Encomenda@{Encomenda}!getRecompensa@{getRecompensa}}
 \index{getRecompensa@{getRecompensa}!Encomenda@{Encomenda}}
 \doxysubsubsection{\texorpdfstring{getRecompensa()}{getRecompensa()}}
 {\footnotesize\ttfamily int Encomenda\+::get\+Recompensa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Returns}
+Valor que a empresa receberá como recompensa pela realização do serviço 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_encomenda_a0ed4dc0daf8055778b0b58ce82d21a27}\label{class_encomenda_a0ed4dc0daf8055778b0b58ce82d21a27}} 
 \index{Encomenda@{Encomenda}!getScore1@{getScore1}}
 \index{getScore1@{getScore1}!Encomenda@{Encomenda}}
 \doxysubsubsection{\texorpdfstring{getScore1()}{getScore1()}}
 {\footnotesize\ttfamily double Encomenda\+::get\+Score1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Returns}
+Score da encomenda tendo em conta o seu peso e volume 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_encomenda_aed3d2d6cdeddf663db3a03ff6a9f4789}\label{class_encomenda_aed3d2d6cdeddf663db3a03ff6a9f4789}} 
 \index{Encomenda@{Encomenda}!getScore2@{getScore2}}
 \index{getScore2@{getScore2}!Encomenda@{Encomenda}}
 \doxysubsubsection{\texorpdfstring{getScore2()}{getScore2()}}
 {\footnotesize\ttfamily double Encomenda\+::get\+Score2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Returns}
+Score da encomenda tendo em conta o seu peso, volume, e recompensa 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_encomenda_ae6633961ab4f7e213f5daf105902f308}\label{class_encomenda_ae6633961ab4f7e213f5daf105902f308}} 
 \index{Encomenda@{Encomenda}!getVolume@{getVolume}}
 \index{getVolume@{getVolume}!Encomenda@{Encomenda}}
 \doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
 {\footnotesize\ttfamily int Encomenda\+::get\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+\begin{DoxyReturn}{Returns}
+Volume do pacote a transportar 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_encomenda_a8830480cd95345260dfbe4e7c273b771}\label{class_encomenda_a8830480cd95345260dfbe4e7c273b771}} 
 \index{Encomenda@{Encomenda}!printEncomenda@{printEncomenda}}
 \index{printEncomenda@{printEncomenda}!Encomenda@{Encomenda}}
 \doxysubsubsection{\texorpdfstring{printEncomenda()}{printEncomenda()}}
 {\footnotesize\ttfamily void Encomenda\+::print\+Encomenda (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{class_encomenda_a9ca6d38640dcbe2e3546ef8bf3f24b17}\label{class_encomenda_a9ca6d38640dcbe2e3546ef8bf3f24b17}} 
+Imprime uma encomenda \mbox{\Hypertarget{class_encomenda_a9ca6d38640dcbe2e3546ef8bf3f24b17}\label{class_encomenda_a9ca6d38640dcbe2e3546ef8bf3f24b17}} 
 \index{Encomenda@{Encomenda}!setDuracao@{setDuracao}}
 \index{setDuracao@{setDuracao}!Encomenda@{Encomenda}}
 \doxysubsubsection{\texorpdfstring{setDuracao()}{setDuracao()}}
 {\footnotesize\ttfamily void Encomenda\+::set\+Duracao (\begin{DoxyParamCaption}\item[{int}]{duracao }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}{Parameters}
+{\em duracao} & tempo de entrega a ser definido \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_encomenda_a3b32f37a4a2f587e2d9cadaf18cbde0a}\label{class_encomenda_a3b32f37a4a2f587e2d9cadaf18cbde0a}} 
 \index{Encomenda@{Encomenda}!setPeso@{setPeso}}
 \index{setPeso@{setPeso}!Encomenda@{Encomenda}}
 \doxysubsubsection{\texorpdfstring{setPeso()}{setPeso()}}
 {\footnotesize\ttfamily void Encomenda\+::set\+Peso (\begin{DoxyParamCaption}\item[{int}]{peso }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}{Parameters}
+{\em peso} & peso a ser definido \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_encomenda_acfcb334704ce7ddddcf78fe29e1fa68e}\label{class_encomenda_acfcb334704ce7ddddcf78fe29e1fa68e}} 
 \index{Encomenda@{Encomenda}!setRecompensa@{setRecompensa}}
 \index{setRecompensa@{setRecompensa}!Encomenda@{Encomenda}}
 \doxysubsubsection{\texorpdfstring{setRecompensa()}{setRecompensa()}}
 {\footnotesize\ttfamily void Encomenda\+::set\+Recompensa (\begin{DoxyParamCaption}\item[{int}]{recompensa }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}{Parameters}
+{\em recompensa} & recompensa a ser definida \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_encomenda_a77372e3a04e30cd454b50a1492555b32}\label{class_encomenda_a77372e3a04e30cd454b50a1492555b32}} 
 \index{Encomenda@{Encomenda}!setScore1@{setScore1}}
 \index{setScore1@{setScore1}!Encomenda@{Encomenda}}
 \doxysubsubsection{\texorpdfstring{setScore1()}{setScore1()}}
 {\footnotesize\ttfamily void Encomenda\+::set\+Score1 (\begin{DoxyParamCaption}\item[{double}]{media\+Peso,  }\item[{double}]{media\+Vol }\end{DoxyParamCaption})}
 
+Calcula um determinado score para a encomenda que é tanto maior quanto mais acima da média for o seu peso e volume 
+\begin{DoxyParams}{Parameters}
+{\em media\+Peso} & média do peso de todas as encomendas \\
+\hline
+{\em media\+Vol} & média do volume de todas as encomendas \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_encomenda_a0b6152e0a22c09657b58c0342f034262}\label{class_encomenda_a0b6152e0a22c09657b58c0342f034262}} 
 \index{Encomenda@{Encomenda}!setScore2@{setScore2}}
 \index{setScore2@{setScore2}!Encomenda@{Encomenda}}
 \doxysubsubsection{\texorpdfstring{setScore2()}{setScore2()}}
 {\footnotesize\ttfamily void Encomenda\+::set\+Score2 (\begin{DoxyParamCaption}\item[{double}]{media\+Recomensa }\end{DoxyParamCaption})}
 
+Calcula um determinado score para a encomenda que é tanto maior quanto mais acima da média for a sua recompensa, e mais abaixo da média for o seu peso e volume 
+\begin{DoxyParams}{Parameters}
+{\em media\+Recomensa} & média da recompensa de todas as encomendas \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_encomenda_ad8f90e4a4518db5d638f2e756cd8789f}\label{class_encomenda_ad8f90e4a4518db5d638f2e756cd8789f}} 
 \index{Encomenda@{Encomenda}!setVolume@{setVolume}}
 \index{setVolume@{setVolume}!Encomenda@{Encomenda}}
 \doxysubsubsection{\texorpdfstring{setVolume()}{setVolume()}}
 {\footnotesize\ttfamily void Encomenda\+::set\+Volume (\begin{DoxyParamCaption}\item[{int}]{volume }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & volume a ser definido \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -27,6 +27,8 @@ bool compareEncomanedaByTime(Encomenda i, Encomenda j){
 
 void Cenarios::cenario3(vector<Encomenda> encomendas){
 
+    cout << "Testing 3:" << endl;
+
     sort(encomendas.begin(), encomendas.end(), compareEncomanedaByTime);
 
     int TIME = (19 - 7) * 3600; //time in seconds from 9 to 17
@@ -42,8 +44,8 @@ void Cenarios::cenario3(vector<Encomenda> encomendas){
             break;
         }
     }
-    cout << endl;
+
     cout << "Packages delivered: " << numEncomendas << endl;
     cout << "Average time per package: " << used_time / (float) numEncomendas << endl;
-    cout << "Percentage of packages delivered: " << ((float) numEncomendas / TOTAL_ENCOMENDAS) * 100 << "%" << endl;
+    cout << "Percentage of packages delivered: " << ((float) numEncomendas / TOTAL_ENCOMENDAS) * 100 << "%" << endl << endl;
 }

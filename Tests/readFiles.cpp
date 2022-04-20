@@ -6,7 +6,7 @@
 
 using namespace std;
 
-vector<Encomenda> readFiles::readEncomendas(){
+vector<Encomenda> ReadFiles::readEncomendas(){
     vector<Encomenda> encomendas;
     ifstream in;
 
@@ -34,7 +34,7 @@ vector<Encomenda> readFiles::readEncomendas(){
     return encomendas;
 }
 
-vector<Carrinha> readFiles::readCarrinhas() {
+vector<Carrinha> ReadFiles::readCarrinhas() {
     vector<Carrinha> carrinhas;
     ifstream in;
 
