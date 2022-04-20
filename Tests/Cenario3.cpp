@@ -20,12 +20,15 @@ using namespace std;
 
 //order them in ascending order
 bool compareEncomanedaByTime(Encomenda i, Encomenda j){
+    if(i.getPrioridade() != j.getPrioridade()){
+        return j.getPrioridade();
+    }
     return (i.getDuracao() > j.getDuracao());
 }
 
 //Time complexity: O(n log n), where n is the number of encomendas
 
-void Cenarios::cenario3(vector<Encomenda> encomendas){
+void Cenarios::cenario3(vector<Encomenda> &encomendas){
 
     cout << "Testing 3:" << endl;
 

@@ -56,6 +56,9 @@ bool compareCarrinha1(Carrinha c1, Carrinha c2) {
 }
 
 bool compareEncomenda1(Encomenda e1, Encomenda e2) {
+    if(e1.getPrioridade() != e2.getPrioridade()){
+        return e2.getPrioridade();
+    }
     return (e1.getScore1() > e2.getScore1());
 }
 
@@ -70,7 +73,7 @@ void setScores1(vector<Carrinha> &carrinhas, vector<Encomenda> &encomendas) {
 
 
 
-void Cenarios::cenario1(vector<Carrinha> carrinhas, vector<Encomenda> encomendas) {
+void Cenarios::cenario1(vector<Carrinha> carrinhas, vector<Encomenda> &encomendas) {
 
     cout << "Testing 1:" << endl;
 

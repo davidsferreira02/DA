@@ -13,6 +13,7 @@ private:
     int duracao;
     double score1;
     double score2;
+    bool prioridade;
 public:
     /*!
      * Construtor para uma Encomenda
@@ -55,6 +56,11 @@ public:
     void setScore2(double mediaRecomensa);
     /*!
      *
+     * Coloca o valor de prioridade da encomenda a verdade
+     */
+    void setPrioritario();
+    /*!
+     *
      * @return Peso do pacote a transportar
      */
     int getPeso();
@@ -83,6 +89,11 @@ public:
      * @return Score da encomenda tendo em conta o seu peso, volume, e recompensa
      */
     double getScore2();
+    /*!
+     *
+     * @return Prioridade de uma encomenda (true se já for de uma dia anterior)
+     */
+    bool getPrioridade();
     /*!
      * Imprime uma encomenda
      */

@@ -4,7 +4,7 @@
 #include "Encomenda.h"
 Encomenda::Encomenda(const int peso, const int volume, const int recompensa,int duracao):
 peso(peso),volume(volume),recompensa(recompensa),duracao(duracao){
-
+    prioridade = false;
 }
 
 int Encomenda::getPeso() {
@@ -30,6 +30,10 @@ double Encomenda::getScore2() {
     return score2;
 }
 
+bool Encomenda::getPrioridade() {
+    return prioridade;
+}
+
 void Encomenda::setPeso(int peso) {
     this->peso=peso;
 }
@@ -41,6 +45,10 @@ void Encomenda::setVolume(int volume) {
 }
 void Encomenda::setDuracao(int duracao) {
     this->duracao=duracao;
+}
+
+void Encomenda::setPrioritario() {
+    this->prioridade=true;
 }
 
 void Encomenda::setScore1(double mediaPeso, double mediaVol) {
