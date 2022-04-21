@@ -21,7 +21,7 @@ using namespace std;
 //order them in ascending order
 bool compareEncomanedaByTime(Encomenda i, Encomenda j){
     if(i.getPrioridade() != j.getPrioridade()){
-        return j.getPrioridade();
+        return i.getPrioridade();
     }
     return (i.getDuracao() > j.getDuracao());
 }

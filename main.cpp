@@ -21,6 +21,7 @@ int main(){
             encomendas.insert(encomendas.end(), newEncomendas.begin(), newEncomendas.end());
         }
 
+        carrinhas = {}; //the estafetas available for the day change each day and are always read from the file
         cout << "Enter the name of the file for the cars (0 for default)" << endl;
         cin >> carrinhasFile;
         if(encomendasFile == "0"){

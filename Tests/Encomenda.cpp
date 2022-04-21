@@ -58,7 +58,3 @@ void Encomenda::setScore1(double mediaPeso, double mediaVol) {
 void Encomenda::setScore2(double mediaRecompensa) {
     this->score2 = (((double) this->recompensa)/mediaRecompensa)/score1;
 }
-
-void Encomenda::printEncomenda() {
-    cout << getPeso() << " " << getVolume() << " " << getRecompensa() << " " << getDuracao() << endl;
-}

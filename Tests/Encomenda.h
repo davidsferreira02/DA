@@ -94,10 +94,6 @@ public:
      * @return Prioridade de uma encomenda (true se já for de uma dia anterior)
      */
     bool getPrioridade();
-    /*!
-     * Imprime uma encomenda
-     */
-    void printEncomenda();
 };
 
 #endif //DA_ENCOMENDA_H
