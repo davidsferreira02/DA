@@ -21,12 +21,12 @@ public:
      * Lê todas as encomendas dos ficheiros, para que estas possam ser usadas nos cenários
      * @return vetor com todas as encomendas lidas
      */
-    static vector<Encomenda> readEncomendas();
+    static vector<Encomenda> readEncomendas(string encomendasFile = "Encomendas.txt");
     /*!
      * Lê todas as carrinhas dos ficheiros, para que estas possam ser usadas nos cenários
      * @return vetor com todas as carrinhas lidas
      */
-    static vector<Carrinha> readCarrinhas();
+    static vector<Carrinha> readCarrinhas(string carrinhasFile = "Carrinhas.txt");
 };
 
 #endif //PROJETO_READFILES_H

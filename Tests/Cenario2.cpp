@@ -33,6 +33,9 @@ bool compareCarrinha2(Carrinha c1, Carrinha c2) {
 }
 
 bool compareEncomenda2(Encomenda e1, Encomenda e2) {
+    if(e1.getPrioridade() != e2.getPrioridade()){
+        return e1.getPrioridade();
+    }
     return (e1.getScore2() > e2.getScore2());
 }
 
@@ -79,7 +82,7 @@ void setScores2(vector<Carrinha> &carrinhas, vector<Encomenda> &encomendas) {
     }
 }
 
-void Cenarios::cenario2(vector<Carrinha> carrinhas, vector<Encomenda> encomendas) {
+void Cenarios::cenario2(vector<Carrinha> carrinhas, vector<Encomenda> &encomendas) {
 
     cout << "Testing 2:" << endl;
 
@@ -113,12 +116,12 @@ void Cenarios::cenario2(vector<Carrinha> carrinhas, vector<Encomenda> encomendas
                     encomendas.erase(encomendas.begin() + j);
                 }
                 numEncomendas += encomendasEntregues.size();
-                //cout << "Added car num" << estafetas << endl;
+                cout << "Added car num" << estafetas << endl;
                 custoTotal += carrinha.getCusto();
                 recompensasTotal += recompensaCarrinha;
             }
             else{
-                //cout << "The car did not have profit" << endl;
+                cout << "The car did not have profit" << endl;
             }
         }
     }
@@ -126,6 +129,7 @@ void Cenarios::cenario2(vector<Carrinha> carrinhas, vector<Encomenda> encomendas
     cout << endl;
     cout << "Number of cars used: "<< estafetas << endl;
     cout << "Number of packages delivered: " << numEncomendas << endl;
+    cout << "Total of packages: " << TOTAL_ENCOMENDAS << endl;
     cout << "Average of packages per car: " << (float) numEncomendas / estafetas << endl;
     cout << "Percentage of packages delivered: " << ((float) numEncomendas / TOTAL_ENCOMENDAS) * 100 << "%" << endl;
     cout << "Money spent on cars: " << custoTotal << " euros" << endl;
