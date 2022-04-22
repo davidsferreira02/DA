@@ -1,8 +1,6 @@
 #ifndef DA_ENCOMENDA_H
 #define DA_ENCOMENDA_H
 
-#include <iostream>
-
 using namespace std;
 
 class Encomenda{
