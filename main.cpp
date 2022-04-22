@@ -6,12 +6,12 @@
 #include "Cenarios.h"
 
 int main(){
-    int fileNumber = 1;
+    int fileNumber = 3;
     vector<Encomenda> encomendas;
     vector<Carrinha> carrinhas;
 
     for (int i = 1; i <= fileNumber; i++) {
-        encomendas = ReadFiles::readEncomendas(i);
+        encomendas = ReadFiles::readEncomendas(1);
         carrinhas = ReadFiles::readCarrinhas(i);
 
         cout << "TEST NUMBER " << i << ":\n";
