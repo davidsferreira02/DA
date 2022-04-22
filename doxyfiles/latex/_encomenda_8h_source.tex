@@ -5,35 +5,35 @@
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef DA\_ENCOMENDA\_H}}
 \DoxyCodeLine{2 \textcolor{preprocessor}{\#define DA\_ENCOMENDA\_H}}
 \DoxyCodeLine{3 }
-\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{keyword}{using namespace }std;}
 \DoxyCodeLine{5 }
-\DoxyCodeLine{6 \textcolor{keyword}{using namespace }std;}
-\DoxyCodeLine{7 }
-\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_encomenda}{Encomenda}}\{}
-\DoxyCodeLine{9 \textcolor{keyword}{private}:}
-\DoxyCodeLine{10     \textcolor{keywordtype}{int} peso;}
-\DoxyCodeLine{11     \textcolor{keywordtype}{int} volume;}
-\DoxyCodeLine{12     \textcolor{keywordtype}{int} recompensa;}
-\DoxyCodeLine{13     \textcolor{keywordtype}{int} duracao;}
-\DoxyCodeLine{14     \textcolor{keywordtype}{double} score1;}
-\DoxyCodeLine{15     \textcolor{keywordtype}{double} score2;}
-\DoxyCodeLine{16 \textcolor{keyword}{public}:}
-\DoxyCodeLine{24     \mbox{\hyperlink{class_encomenda_ae5de3724baaf33db3aa4328db847f493}{Encomenda}}(\textcolor{keywordtype}{int} peso,\textcolor{keywordtype}{int} volume,\textcolor{keywordtype}{int} recompensa,\textcolor{keywordtype}{int} duracao);}
-\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_encomenda_a3b32f37a4a2f587e2d9cadaf18cbde0a}{setPeso}}(\textcolor{keywordtype}{int} peso);}
-\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_encomenda_ad8f90e4a4518db5d638f2e756cd8789f}{setVolume}}(\textcolor{keywordtype}{int} volume);}
-\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_encomenda_acfcb334704ce7ddddcf78fe29e1fa68e}{setRecompensa}}(\textcolor{keywordtype}{int} recompensa);}
-\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_encomenda_a9ca6d38640dcbe2e3546ef8bf3f24b17}{setDuracao}}(\textcolor{keywordtype}{int} duracao);}
-\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_encomenda_a77372e3a04e30cd454b50a1492555b32}{setScore1}}(\textcolor{keywordtype}{double} mediaPeso, \textcolor{keywordtype}{double} mediaVol);}
-\DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_encomenda_a0b6152e0a22c09657b58c0342f034262}{setScore2}}(\textcolor{keywordtype}{double} mediaRecomensa);}
-\DoxyCodeLine{60     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_encomenda_a63057714546d6497cb12718e9c95b533}{getPeso}}();}
-\DoxyCodeLine{65     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_encomenda_ae6633961ab4f7e213f5daf105902f308}{getVolume}}();}
-\DoxyCodeLine{70     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_encomenda_adf33a4e27d78209d64124a1330791918}{getRecompensa}}();}
-\DoxyCodeLine{75     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_encomenda_a7a5f19dd48f48aec85f5a09db0d344f3}{getDuracao}}();}
-\DoxyCodeLine{80     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_encomenda_a0ed4dc0daf8055778b0b58ce82d21a27}{getScore1}}();}
-\DoxyCodeLine{85     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_encomenda_aed3d2d6cdeddf663db3a03ff6a9f4789}{getScore2}}();}
-\DoxyCodeLine{89     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_encomenda_a8830480cd95345260dfbe4e7c273b771}{printEncomenda}}();}
-\DoxyCodeLine{90 \};}
-\DoxyCodeLine{91 }
-\DoxyCodeLine{92 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_ENCOMENDA\_H}}
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_encomenda}{Encomenda}}\{}
+\DoxyCodeLine{7 \textcolor{keyword}{private}:}
+\DoxyCodeLine{8     \textcolor{keywordtype}{int} peso;}
+\DoxyCodeLine{9     \textcolor{keywordtype}{int} volume;}
+\DoxyCodeLine{10     \textcolor{keywordtype}{int} recompensa;}
+\DoxyCodeLine{11     \textcolor{keywordtype}{int} duracao;}
+\DoxyCodeLine{12     \textcolor{keywordtype}{double} score1;}
+\DoxyCodeLine{13     \textcolor{keywordtype}{double} score2;}
+\DoxyCodeLine{14     \textcolor{keywordtype}{bool} prioridade;}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_encomenda_ae5de3724baaf33db3aa4328db847f493}{Encomenda}}(\textcolor{keywordtype}{int} peso,\textcolor{keywordtype}{int} volume,\textcolor{keywordtype}{int} recompensa,\textcolor{keywordtype}{int} duracao);}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_encomenda_a3b32f37a4a2f587e2d9cadaf18cbde0a}{setPeso}}(\textcolor{keywordtype}{int} peso);}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_encomenda_ad8f90e4a4518db5d638f2e756cd8789f}{setVolume}}(\textcolor{keywordtype}{int} volume);}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_encomenda_acfcb334704ce7ddddcf78fe29e1fa68e}{setRecompensa}}(\textcolor{keywordtype}{int} recompensa);}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_encomenda_a9ca6d38640dcbe2e3546ef8bf3f24b17}{setDuracao}}(\textcolor{keywordtype}{int} duracao);}
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_encomenda_a77372e3a04e30cd454b50a1492555b32}{setScore1}}(\textcolor{keywordtype}{double} mediaPeso, \textcolor{keywordtype}{double} mediaVol);}
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_encomenda_a0b6152e0a22c09657b58c0342f034262}{setScore2}}(\textcolor{keywordtype}{double} mediaRecomensa);}
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_encomenda_af5e8b61b70df2be7e0241b213ff75445}{setPrioritario}}();}
+\DoxyCodeLine{64     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_encomenda_a63057714546d6497cb12718e9c95b533}{getPeso}}();}
+\DoxyCodeLine{69     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_encomenda_ae6633961ab4f7e213f5daf105902f308}{getVolume}}();}
+\DoxyCodeLine{74     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_encomenda_adf33a4e27d78209d64124a1330791918}{getRecompensa}}();}
+\DoxyCodeLine{79     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_encomenda_a7a5f19dd48f48aec85f5a09db0d344f3}{getDuracao}}();}
+\DoxyCodeLine{84     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_encomenda_a0ed4dc0daf8055778b0b58ce82d21a27}{getScore1}}();}
+\DoxyCodeLine{89     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_encomenda_aed3d2d6cdeddf663db3a03ff6a9f4789}{getScore2}}();}
+\DoxyCodeLine{94     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_encomenda_ad9d9cabd28599aa8d270abf32f7fb353}{getPrioridade}}();}
+\DoxyCodeLine{95 \};}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//DA\_ENCOMENDA\_H}}
 
 \end{DoxyCode}

@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "DA", "index.html", [
+    [ "How to run", "md__c___d_e_v_2022__d_a__r_e_a_d_m_e.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

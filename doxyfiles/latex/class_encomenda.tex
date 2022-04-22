@@ -21,6 +21,8 @@ void \mbox{\hyperlink{class_encomenda_a77372e3a04e30cd454b50a1492555b32}{set\+Sc
 \item 
 void \mbox{\hyperlink{class_encomenda_a0b6152e0a22c09657b58c0342f034262}{set\+Score2}} (double media\+Recomensa)
 \item 
+void \mbox{\hyperlink{class_encomenda_af5e8b61b70df2be7e0241b213ff75445}{set\+Prioritario}} ()
+\item 
 int \mbox{\hyperlink{class_encomenda_a63057714546d6497cb12718e9c95b533}{get\+Peso}} ()
 \item 
 int \mbox{\hyperlink{class_encomenda_ae6633961ab4f7e213f5daf105902f308}{get\+Volume}} ()
@@ -33,7 +35,7 @@ double \mbox{\hyperlink{class_encomenda_a0ed4dc0daf8055778b0b58ce82d21a27}{get\+
 \item 
 double \mbox{\hyperlink{class_encomenda_aed3d2d6cdeddf663db3a03ff6a9f4789}{get\+Score2}} ()
 \item 
-void \mbox{\hyperlink{class_encomenda_a8830480cd95345260dfbe4e7c273b771}{print\+Encomenda}} ()
+bool \mbox{\hyperlink{class_encomenda_ad9d9cabd28599aa8d270abf32f7fb353}{get\+Prioridade}} ()
 \end{DoxyCompactItemize}
 
 
@@ -76,6 +78,15 @@ Tempo estimado de entrega
 \begin{DoxyReturn}{Returns}
 Peso do pacote a transportar 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_encomenda_ad9d9cabd28599aa8d270abf32f7fb353}\label{class_encomenda_ad9d9cabd28599aa8d270abf32f7fb353}} 
+\index{Encomenda@{Encomenda}!getPrioridade@{getPrioridade}}
+\index{getPrioridade@{getPrioridade}!Encomenda@{Encomenda}}
+\doxysubsubsection{\texorpdfstring{getPrioridade()}{getPrioridade()}}
+{\footnotesize\ttfamily bool Encomenda\+::get\+Prioridade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Prioridade de uma encomenda (true se já for de uma dia anterior) 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_encomenda_adf33a4e27d78209d64124a1330791918}\label{class_encomenda_adf33a4e27d78209d64124a1330791918}} 
 \index{Encomenda@{Encomenda}!getRecompensa@{getRecompensa}}
 \index{getRecompensa@{getRecompensa}!Encomenda@{Encomenda}}
@@ -112,13 +123,7 @@ Score da encomenda tendo em conta o seu peso, volume, e recompensa
 \begin{DoxyReturn}{Returns}
 Volume do pacote a transportar 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_encomenda_a8830480cd95345260dfbe4e7c273b771}\label{class_encomenda_a8830480cd95345260dfbe4e7c273b771}} 
-\index{Encomenda@{Encomenda}!printEncomenda@{printEncomenda}}
-\index{printEncomenda@{printEncomenda}!Encomenda@{Encomenda}}
-\doxysubsubsection{\texorpdfstring{printEncomenda()}{printEncomenda()}}
-{\footnotesize\ttfamily void Encomenda\+::print\+Encomenda (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Imprime uma encomenda \mbox{\Hypertarget{class_encomenda_a9ca6d38640dcbe2e3546ef8bf3f24b17}\label{class_encomenda_a9ca6d38640dcbe2e3546ef8bf3f24b17}} 
+\mbox{\Hypertarget{class_encomenda_a9ca6d38640dcbe2e3546ef8bf3f24b17}\label{class_encomenda_a9ca6d38640dcbe2e3546ef8bf3f24b17}} 
 \index{Encomenda@{Encomenda}!setDuracao@{setDuracao}}
 \index{setDuracao@{setDuracao}!Encomenda@{Encomenda}}
 \doxysubsubsection{\texorpdfstring{setDuracao()}{setDuracao()}}
@@ -140,7 +145,13 @@ Imprime uma encomenda \mbox{\Hypertarget{class_encomenda_a9ca6d38640dcbe2e3546ef
 {\em peso} & peso a ser definido \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_encomenda_acfcb334704ce7ddddcf78fe29e1fa68e}\label{class_encomenda_acfcb334704ce7ddddcf78fe29e1fa68e}} 
+\mbox{\Hypertarget{class_encomenda_af5e8b61b70df2be7e0241b213ff75445}\label{class_encomenda_af5e8b61b70df2be7e0241b213ff75445}} 
+\index{Encomenda@{Encomenda}!setPrioritario@{setPrioritario}}
+\index{setPrioritario@{setPrioritario}!Encomenda@{Encomenda}}
+\doxysubsubsection{\texorpdfstring{setPrioritario()}{setPrioritario()}}
+{\footnotesize\ttfamily void Encomenda\+::set\+Prioritario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Coloca o valor de prioridade da encomenda a verdade \mbox{\Hypertarget{class_encomenda_acfcb334704ce7ddddcf78fe29e1fa68e}\label{class_encomenda_acfcb334704ce7ddddcf78fe29e1fa68e}} 
 \index{Encomenda@{Encomenda}!setRecompensa@{setRecompensa}}
 \index{setRecompensa@{setRecompensa}!Encomenda@{Encomenda}}
 \doxysubsubsection{\texorpdfstring{setRecompensa()}{setRecompensa()}}
