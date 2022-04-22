@@ -34,13 +34,14 @@ void Cenarios::cenario3(vector<Encomenda> &encomendas){
 
     sort(encomendas.begin(), encomendas.end(), compareEncomanedaByTime);
 
-    int TIME = (19 - 7) * 3600; //time in seconds from 9 to 17
-    int numEncomendas = 0, used_time = 0, TOTAL_ENCOMENDAS = encomendas.size();
+    int TIME = (17 - 9) * 3600; //time in seconds from 9 to 17
+    int numEncomendas = 0, used_time = 0, total_time_of_delivery = 0, TOTAL_ENCOMENDAS = encomendas.size();
 
     while( ((TIME - used_time) > 0) && (encomendas.size() > 0)){
         if( ( (TIME - used_time) - encomendas.rbegin()->getDuracao() ) > 0){
             numEncomendas++;
             used_time += encomendas.rbegin()->getDuracao();
+            total_time_of_delivery += used_time;
             encomendas.pop_back();
         }
         else{
@@ -48,7 +49,9 @@ void Cenarios::cenario3(vector<Encomenda> &encomendas){
         }
     }
 
+    cout << endl;
     cout << "Packages delivered: " << numEncomendas << endl;
-    cout << "Average time per package: " << used_time / (float) numEncomendas << endl;
+    cout << "Average time of delivery: " << 9 + (total_time_of_delivery / numEncomendas) / 3600 << ":" << ((total_time_of_delivery / numEncomendas) % 3600) / 60 << ":" << ((total_time_of_delivery / numEncomendas) % 3600) % 60 << endl;
+    cout << "Average time per package: " << used_time / (float) numEncomendas << " seconds" <<  endl;
     cout << "Percentage of packages delivered: " << ((float) numEncomendas / TOTAL_ENCOMENDAS) * 100 << "%" << endl << endl;
 }

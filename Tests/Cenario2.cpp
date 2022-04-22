@@ -117,12 +117,12 @@ void Cenarios::cenario2(vector<Carrinha> carrinhas, vector<Encomenda> &encomenda
                     encomendas.erase(encomendas.begin() + j);
                 }
                 numEncomendas += encomendasEntregues.size();
-                cout << "Added car num" << estafetas << endl;
+                //cout << "Added car num" << estafetas << endl;
                 custoTotal += carrinha.getCusto();
                 recompensasTotal += recompensaCarrinha;
             }
             else{
-                cout << "The car did not have profit" << endl;
+                //cout << "The car did not have profit" << endl;
             }
         }
     }
