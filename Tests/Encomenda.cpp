@@ -52,9 +52,9 @@ void Encomenda::setPrioritario() {
 }
 
 void Encomenda::setScore1(double mediaPeso, double mediaVol) {
-    this->score1 = (((double) this->peso)/mediaPeso)*(((double) this->volume)/mediaVol);
+    this->score1 = (((this->peso - mediaPeso) / mediaPeso)) + (((this->volume - mediaVol)/mediaVol));
 }
 
 void Encomenda::setScore2(double mediaRecompensa) {
-    this->score2 = (((double) this->recompensa)/mediaRecompensa)/score1;
+    this->score2 = (((this->recompensa - mediaRecompensa)/mediaRecompensa) * 2) - score1;
 }

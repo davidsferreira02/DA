@@ -35,11 +35,11 @@ void Carrinha::setCusto(int custo) {
 }
 
 void Carrinha::setScore1(double mediaPeso, double mediaVol) {
-    this->score1 = (((double) this->pesoMax)/mediaPeso)*(((double) this->volMax)/mediaVol);
+    this->score1 = (((this->pesoMax - mediaPeso)/mediaPeso)) + (((this->volMax - mediaVol)/mediaVol));
 }
 
 void Carrinha::setScore2(double mediaCusto) {
-    this->score2 = score1/(((double) this->custo)/mediaCusto);
+    this->score2 = score1 - (((this->custo - mediaCusto)/mediaCusto) * 2);
 }
 
 

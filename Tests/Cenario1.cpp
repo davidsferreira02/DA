@@ -71,7 +71,7 @@ void setScores1(vector<Carrinha> &carrinhas, vector<Encomenda> &encomendas) {
     for (auto &encomenda : encomendas) encomenda.setScore1(medPesoEnc,medVolEnc);
 }
 
-
+//Time complexity: O(c*e^2), where c is the number of cars and e the number of deliveries
 
 void Cenarios::cenario1(vector<Carrinha> carrinhas, vector<Encomenda> &encomendas) {
 
