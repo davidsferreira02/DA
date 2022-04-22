@@ -84,8 +84,6 @@ void setScores2(vector<Carrinha> &carrinhas, vector<Encomenda> &encomendas) {
 
 void Cenarios::cenario2(vector<Carrinha> carrinhas, vector<Encomenda> &encomendas) {
 
-    cout << "Testing 2:" << endl;
-
     setScores2(carrinhas,encomendas);
     sort(encomendas.begin(),encomendas.end(), compareEncomenda2);
     sort(carrinhas.begin(),carrinhas.end(), compareCarrinha2);
@@ -116,25 +114,13 @@ void Cenarios::cenario2(vector<Carrinha> carrinhas, vector<Encomenda> &encomenda
                     encomendas.erase(encomendas.begin() + j);
                 }
                 numEncomendas += encomendasEntregues.size();
-                cout << "Added car num" << estafetas << endl;
                 custoTotal += carrinha.getCusto();
                 recompensasTotal += recompensaCarrinha;
             }
             else{
-                cout << "The car did not have profit" << endl;
             }
         }
     }
-
-    cout << endl;
-    cout << "Number of cars used: "<< estafetas << endl;
-    cout << "Number of packages delivered: " << numEncomendas << endl;
-    cout << "Total of packages: " << TOTAL_ENCOMENDAS << endl;
-    cout << "Average of packages per car: " << (float) numEncomendas / estafetas << endl;
-    cout << "Percentage of packages delivered: " << ((float) numEncomendas / TOTAL_ENCOMENDAS) * 100 << "%" << endl;
-    cout << "Money spent on cars: " << custoTotal << " euros" << endl;
-    cout << "Money made on rewards: " << recompensasTotal << " euros" << endl;
-    cout << "Profit: " << recompensasTotal - custoTotal << " euros"<< endl << endl;
 }
 
 

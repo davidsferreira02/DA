@@ -4,72 +4,50 @@
 
 #include "readFiles.h"
 #include "Cenarios.h"
+#include <time.h>
 
 int main(){
     string encomendasFile, carrinhasFile;
     vector<Encomenda> encomendas = {};
     vector<Carrinha> carrinhas = {};
-    while(true) {
-        cout << "Enter the name of the file for the deliveries (0 for default)" << endl;
-        cin >> encomendasFile;
-        if(encomendasFile == "0"){
-            vector<Encomenda> newEncomendas = ReadFiles::readEncomendas();
-            encomendas.insert(encomendas.end(), newEncomendas.begin(), newEncomendas.end());
-        }
-        else{
-            vector<Encomenda> newEncomendas = ReadFiles::readEncomendas(encomendasFile);
-            encomendas.insert(encomendas.end(), newEncomendas.begin(), newEncomendas.end());
-        }
 
-        carrinhas = {}; //the estafetas available for the day change each day and are always read from the file
-        cout << "Enter the name of the file for the cars (0 for default)" << endl;
-        cin >> carrinhasFile;
-        if(encomendasFile == "0"){
-            vector<Carrinha> newCarrinhas = ReadFiles::readCarrinhas();
-            carrinhas.insert(carrinhas.end(), newCarrinhas.begin(), newCarrinhas.end());
-        }
-        else{
-            vector<Carrinha> newCarrinhas = ReadFiles::readCarrinhas(carrinhasFile);
-            carrinhas.insert(carrinhas.end(), newCarrinhas.begin(), newCarrinhas.end());
-        }
+    clock_t t;
 
-        int option;
-        bool invalid = true;
-        while(invalid) {
+    vector<int> sizes = {10,100,1000,10000};
 
-            cout << "Choose one one scenario (1, 2 or 3)" << endl;
-            cin >> option;
-            switch (option) {
-                case 1:
-                    Cenarios::cenario1(carrinhas, encomendas);
-                    invalid = false;
-                    break;
-                case 2:
-                    Cenarios::cenario2(carrinhas, encomendas);
-                    invalid = false;
-                    break;
-                case 3:
-                    Cenarios::cenario3(encomendas);
-                    invalid = false;
-                    break;
-                default:
-                    cout << "Invalid scenario" << endl;
-                    cin.clear();
-                    cin.ignore(1000, '\n');
-                    break;
-            }
-        }
+    cout << "CENARIO 1" << endl;
 
-        for(auto &encomenda : encomendas){
-            encomenda.setPrioritario();
-        }
-
-        char nextDay;
-        cout << "Want to continue to the next day? (y/n)" << endl;
-        cin >> nextDay;
-
-        if(tolower(nextDay) != 'y'){
-            break;
-        }
+    for (int i = 1;i <= sizes.size();i++) {
+        encomendas = ReadFiles::readEncomendas(to_string(i));
+        carrinhas = ReadFiles::readCarrinhas(to_string(i));
+        t = clock();
+        Cenarios::cenario1(carrinhas,encomendas);
+        t = clock() - t;
+        cout << "For size " << sizes[i-1] << " : ";
+        cout << ((float) t)/CLOCKS_PER_SEC << " sec \n";
     }
+
+    cout << "CENARIO 2" << endl;
+
+    for (int i = 1;i <= sizes.size();i++) {
+        encomendas = ReadFiles::readEncomendas(to_string(i));
+        carrinhas = ReadFiles::readCarrinhas(to_string(i));
+        t = clock();
+        Cenarios::cenario2(carrinhas,encomendas);
+        t = clock() - t;
+        cout << "For size " << sizes[i-1] << " : ";
+        cout << ((float) t)/CLOCKS_PER_SEC << " sec \n";
+    }
+
+    cout << "CENARIO 3" << endl;
+
+    for (int i = 1;i <= sizes.size();i++) {
+        encomendas = ReadFiles::readEncomendas(to_string(i));
+        t = clock();
+        Cenarios::cenario3(encomendas);
+        t = clock() - t;
+        cout << "For size " << sizes[i-1] << " : ";
+        cout << ((float) t)/CLOCKS_PER_SEC << " sec \n";
+    }
+
 }

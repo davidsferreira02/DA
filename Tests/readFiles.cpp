@@ -10,7 +10,7 @@ vector<Encomenda> ReadFiles::readEncomendas(string encomendasFile){
     vector<Encomenda> encomendas;
     ifstream in;
 
-    in.open("../Tests/Data/" + encomendasFile);
+    in.open("../Tests/Data/Encomendas" + encomendasFile + ".txt");
 
     if(!in.is_open()){
         cerr << "Unable to open file" << endl;
@@ -38,7 +38,7 @@ vector<Carrinha> ReadFiles::readCarrinhas(string carrinhasFile) {
     vector<Carrinha> carrinhas;
     ifstream in;
 
-    in.open("../Tests/Data/" + carrinhasFile);
+    in.open("../Tests/Data/Carrinhas" + carrinhasFile + ".txt");
 
     if(!in.is_open()){
         cerr << "Unable to open file" << endl;
