@@ -93,10 +93,11 @@ void Cenarios::cenario2(vector<Carrinha> carrinhas, vector<Encomenda> &encomenda
     int numEncomendas = 0, TOTAL_ENCOMENDAS = encomendas.size();
     int recompensasTotal = 0, recompensaCarrinha = 0, custoTotal = 0;
     int estafetas = 0;
+    vector<int> encomendasEntregues;
     for (auto carrinha: carrinhas) {
         bool flag = 0;
         int idx = 0;
-        vector<int> encomendasEntregues;
+        encomendasEntregues = {};
         recompensaCarrinha = 0;
         for (auto encomenda: encomendas) {
             bool preencher = podePreencher2(carrinha, encomenda);
